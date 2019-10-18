@@ -16,7 +16,7 @@ static float X = 7.0; // X-coordinate of center of circle.
 static float Y = 93.0; // Y-coordinate of center of circle.
 static int numVertices = 80; // Number of vertices on circle.
 
-void line(void){
+void linel1(void){
 
 	glColor3f(1.0, 1.0, 1.0);
 	glLineWidth(4.0f);
@@ -227,6 +227,241 @@ void line(void){
 }
 
 
+void linel2(void){
+
+	glColor3f(1.0, 1.0, 1.0);
+	glLineWidth(4.0f);
+      
+   glBegin(GL_LINES);
+
+      glVertex3f(1.0, 1.0, 0.0);
+      glVertex3f(99.0, 1.0, 0.0);
+   glEnd();
+
+   
+   glBegin(GL_LINES);
+      glVertex3f(1.0,1.0, 0.0);
+      glVertex3f(1.0, 99.0, 0.0);
+   glEnd();
+
+   glBegin(GL_LINES);
+      glVertex3f(1.0,99.0, 0.0);
+      glVertex3f(99.0, 99.0, 0.0);
+   glEnd();
+   
+   glBegin(GL_LINES);
+      glVertex3f(99.0,99.0, 0.0);
+      glVertex3f(99.0, 1.0, 0.0);
+   glEnd();
+
+//fin marcos   
+
+//horizontal
+  
+//col1
+   glBegin(GL_LINES);
+
+      glVertex3f(49.0,87.0, 0.0);
+      glVertex3f(13.0, 87.0, 0.0);
+   glEnd();
+   //col2
+    glBegin(GL_LINES);
+
+      glVertex3f(49.0,75.0, 0.0);
+      glVertex3f(25.0, 75.0, 0.0);
+   glEnd();
+
+   //col3
+
+     glBegin(GL_LINES);
+
+      glVertex3f(73.0,63.0, 0.0);
+      glVertex3f(85.0, 63.0, 0.0);
+   glEnd();
+      glBegin(GL_LINES);
+
+      glVertex3f(25.0,63.0, 0.0);
+      glVertex3f(61.0, 63.0, 0.0);
+   glEnd();
+
+  
+   
+   //col4
+      glBegin(GL_LINES);
+
+      glVertex3f(13.0,51.0, 0.0);
+      glVertex3f(49.0, 51.0, 0.0);
+   glEnd();
+
+      glBegin(GL_LINES);
+      glVertex3f(73.0,51.0, 0.0);
+      glVertex3f(99.0, 51.0, 0.0);
+   glEnd();
+
+//col5
+    glBegin(GL_LINES);
+
+      glVertex3f(1.0,39.0, 0.0);
+      glVertex3f(13.0, 39.0, 0.0);
+   glEnd();
+
+     glBegin(GL_LINES);
+
+      glVertex3f(49.0,39.0, 0.0);
+      glVertex3f(85.0, 39.0, 0.0);
+   glEnd();
+
+//col6
+    glBegin(GL_LINES);
+
+      glVertex3f(1.0,27.0, 0.0);
+      glVertex3f(25.0, 27.0, 0.0);
+   glEnd();
+
+
+    glBegin(GL_LINES);
+
+      glVertex3f(37.0,27.0, 0.0);
+      glVertex3f(49.0, 27.0, 0.0);
+   glEnd();
+     glBegin(GL_LINES);
+
+      glVertex3f(61.0,27.0, 0.0);
+      glVertex3f(73.0, 27.0, 0.0);
+   glEnd();
+//col 7
+
+  glBegin(GL_LINES);
+
+      glVertex3f(13.0,15.0, 0.0);
+      glVertex3f(25.0, 15.0, 0.0);
+   glEnd();
+
+
+     glBegin(GL_LINES);
+
+      glVertex3f(37.0,15.0, 0.0);
+      glVertex3f(49.0, 15.0, 0.0);
+   glEnd();
+
+
+     glBegin(GL_LINES);
+
+      glVertex3f(61.0,15.0, 0.0);
+      glVertex3f(85.0, 15.0, 0.0);
+   glEnd();
+
+
+//vertical
+    glBegin(GL_LINES);
+
+      glVertex3f(13.0,87.0, 0.0);
+      glVertex3f(13.0, 51.0, 0.0);
+   glEnd();
+
+
+     glBegin(GL_LINES);
+
+      glVertex3f(13.0,63.0, 0.0);
+      glVertex3f(13.0, 39.0, 0.0);
+   glEnd();
+
+//col 2
+    glBegin(GL_LINES);
+
+      glVertex3f(25.0,75.0, 0.0);
+      glVertex3f(25.0, 63.0, 0.0);
+   glEnd();
+
+
+    glBegin(GL_LINES);
+
+      glVertex3f(25.0,39.0, 0.0);
+      glVertex3f(25.0, 15.0, 0.0);
+   glEnd();
+
+
+   
+
+   //col3
+   
+
+     glBegin(GL_LINES);
+
+      glVertex3f(37.0,51.0, 0.0);
+      glVertex3f(37.0, 39.0, 0.0);
+   glEnd();
+
+    glBegin(GL_LINES);
+
+      glVertex3f(37.0,27.0, 0.0);
+      glVertex3f(37.0, 15.0, 0.0);
+   glEnd();
+
+
+   
+
+    //col4
+    
+
+      glBegin(GL_LINES);
+
+      glVertex3f(49.0,39.0, 0.0);
+      glVertex3f(49.0, 27.0, 0.0);
+   glEnd();
+  
+//col 5
+
+ 
+   glBegin(GL_LINES);
+
+      glVertex3f(61.0,87.0, 0.0);
+      glVertex3f(61.0, 39.0, 0.0);
+   glEnd();
+
+
+
+
+
+//col 6
+   
+      glBegin(GL_LINES);
+
+      glVertex3f(73.0,99.0, 0.0);
+      glVertex3f(73.0, 63.0, 0.0);
+   glEnd();
+
+      glBegin(GL_LINES);
+
+      glVertex3f(73.0,15.0, 0.0);
+      glVertex3f(73.0, 1.0, 0.0);
+   glEnd();
+   
+      glBegin(GL_LINES);
+
+      glVertex3f(73.0,39.0, 0.0);
+      glVertex3f(73.0, 27.0, 0.0);
+   glEnd();
+//col7
+      
+
+
+      glBegin(GL_LINES);
+
+      glVertex3f(85.0,87.0, 0.0);
+      glVertex3f(85.0, 63.0, 0.0);
+   glEnd();
+
+
+ glBegin(GL_LINES);
+
+      glVertex3f(85.0,15.0, 0.0);
+      glVertex3f(85.0, 39.0, 0.0);
+   glEnd();
+
+}
+
+
 
 void serpiente(){
       float t = 0; // Angle parameter.
@@ -275,7 +510,8 @@ void displayMe(void)
 {  
 
    glClear(GL_COLOR_BUFFER_BIT);
-   line();
+   linel1();
+   //linel2();
    serpiente();
    glFlush();
 }
