@@ -18,6 +18,8 @@ int abajo = 0;
 static float R = 4.0; // Radius of circle.
 static float X = 7.0; // X-coordinate of center of circle.
 static float Y = 93.0; // Y-coordinate of center of circle.
+static float X1= 67.0; // X-coordinate of center of circle.
+static float Y1= 33.0; // Y-coordinate of center of circle.
 static int numVertices = 80; // Number of vertices on circle.
 
 void linel1(void){
@@ -229,6 +231,25 @@ void linel1(void){
    glEnd();
 
 }
+
+void meta(){
+      float t = 0; // Angle parameter.
+   int i;
+
+   glBegin(GL_LINE_LOOP);
+      glColor3f(0.0, 1.0, 0.0);
+         for(i = 0; i < numVertices; ++i)
+     {
+          
+         glVertex3f(X1 + R * cos(t), Y1 + R * sin(t), 0.0);
+         t += 2 * PI / numVertices;
+    }
+   glEnd();
+
+
+}
+
+
 
 
 void linel2(void){
@@ -666,6 +687,7 @@ void displayMe(void)
    //linel1();
    linel2();
    serpiente();
+   meta();
    glFlush();
 }
 
