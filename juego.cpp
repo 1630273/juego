@@ -22,18 +22,231 @@ bool paredArriba = false;
 bool paredAbajo = false;
 bool paredIzquierda = false;
 bool paredDerecha = false;
+bool bandera=true;
 
 static float R = 4.0; // Radius of circle.
 static int numVertices = 80; // Number of vertices on circle.
 
-
+static int ran;
 static float X ,Y, X1,Y1;
+
 
 
 void nivel1(void){
 
 	glColor3f(1.0, 1.0, 1.0);
 	glLineWidth(4.0f);
+      
+   glBegin(GL_LINES);
+
+      glVertex3f(1.0, 1.0, 0.0);
+      glVertex3f(99.0, 1.0, 0.0);
+   glEnd();
+
+   
+   glBegin(GL_LINES);
+      glVertex3f(1.0,1.0, 0.0);
+      glVertex3f(1.0, 99.0, 0.0);
+   glEnd();
+
+   glBegin(GL_LINES);
+      glVertex3f(1.0,99.0, 0.0);
+      glVertex3f(99.0, 99.0, 0.0);
+   glEnd();
+   
+   glBegin(GL_LINES);
+      glVertex3f(99.0,99.0, 0.0);
+      glVertex3f(99.0, 1.0, 0.0);
+   glEnd();
+
+//fin marcos   
+
+//horizontal
+  
+//col1
+   glBegin(GL_LINES);
+
+      glVertex3f(61.0,87.0, 0.0);
+      glVertex3f(13.0, 87.0, 0.0);
+   glEnd();
+   //col2
+    glBegin(GL_LINES);
+
+      glVertex3f(49.0,75.0, 0.0);
+      glVertex3f(13.0, 75.0, 0.0);
+   glEnd();
+
+   //col3
+
+     glBegin(GL_LINES);
+
+      glVertex3f(13.0,63.0, 0.0);
+      glVertex3f(25.0, 63.0, 0.0);
+   glEnd();
+      glBegin(GL_LINES);
+
+      glVertex3f(49.0,63.0, 0.0);
+      glVertex3f(73.0, 63.0, 0.0);
+   glEnd();
+
+  
+   
+   //col4
+      glBegin(GL_LINES);
+
+      glVertex3f(25.0,51.0, 0.0);
+      glVertex3f(49.0, 51.0, 0.0);
+   glEnd();
+
+      glBegin(GL_LINES);
+      glVertex3f(73.0,51.0, 0.0);
+      glVertex3f(85.0, 51.0, 0.0);
+   glEnd();
+
+//col5
+    glBegin(GL_LINES);
+
+      glVertex3f(13.0,39.0, 0.0);
+      glVertex3f(49.0, 39.0, 0.0);
+   glEnd();
+
+     glBegin(GL_LINES);
+
+      glVertex3f(85.0,39.0, 0.0);
+      glVertex3f(99.0, 39.0, 0.0);
+   glEnd();
+
+//col6
+    glBegin(GL_LINES);
+
+      glVertex3f(1.0,27.0, 0.0);
+      glVertex3f(25.0, 27.0, 0.0);
+   glEnd();
+
+
+    glBegin(GL_LINES);
+
+      glVertex3f(37.0,27.0, 0.0);
+      glVertex3f(49.0, 27.0, 0.0);
+   glEnd();
+     glBegin(GL_LINES);
+
+      glVertex3f(61.0,27.0, 0.0);
+      glVertex3f(73.0, 27.0, 0.0);
+   glEnd();
+//col 7
+
+  glBegin(GL_LINES);
+
+      glVertex3f(13.0,15.0, 0.0);
+      glVertex3f(25.0, 15.0, 0.0);
+   glEnd();
+
+
+     glBegin(GL_LINES);
+
+      glVertex3f(37.0,15.0, 0.0);
+      glVertex3f(75.0, 15.0, 0.0);
+   glEnd();  glRasterPos3f(-45.0, 150.0, 0.0);
+  
+//vertical
+    glBegin(GL_LINES);
+
+      glVertex3f(13.0,87.0, 0.0);
+      glVertex3f(13.0, 75.0, 0.0);
+   glEnd();
+
+
+     glBegin(GL_LINES);
+
+      glVertex3f(13.0,63.0, 0.0);
+      glVertex3f(13.0, 39.0, 0.0);
+   glEnd();
+
+//col 2
+    glBegin(GL_LINES);
+
+      glVertex3f(25.0,63.0, 0.0);
+      glVertex3f(25.0, 51.0, 0.0);
+   glEnd();
+
+
+    glBegin(GL_LINES);
+
+      glVertex3f(25.0,39.0, 0.0);
+      glVertex3f(25.0, 15.0, 0.0);
+   glEnd();
+
+   //col3
+    glBegin(GL_LINES);
+
+      glVertex3f(37.0,75.0, 0.0);
+      glVertex3f(37.0, 63.0, 0.0);
+   glEnd();
+
+     glBegin(GL_LINES);
+
+      glVertex3f(37.0,15.0, 0.0);
+      glVertex3f(37.0, 1.0, 0.0);
+   glEnd();
+
+    //col4
+    glBegin(GL_LINES);
+
+      glVertex3f(49.0,75.0, 0.0);
+      glVertex3f(49.0, 63.0, 0.0);
+   glEnd();
+
+
+      glBegin(GL_LINES);
+
+      glVertex3f(49.0,39.0, 0.0);
+      glVertex3f(49.0, 27.0, 0.0);
+   glEnd();
+  
+//col 5
+
+    glBegin(GL_LINES);
+
+      glVertex3f(61.0,51.0, 0.0);
+      glVertex3f(61.0, 27.0, 0.0);
+   glEnd();
+
+
+   glBegin(GL_LINES);
+
+      glVertex3f(61.0,87.0, 0.0);
+      glVertex3f(61.0, 75.0, 0.0);
+   glEnd();
+
+//col 6
+   
+      glBegin(GL_LINES);
+
+      glVertex3f(73.0,87.0, 0.0);
+      glVertex3f(73.0, 27.0, 0.0);
+   glEnd();
+//col7
+      
+      glBegin(GL_LINES);
+
+      glVertex3f(85.0,87.0, 0.0);
+      glVertex3f(85.0, 39.0, 0.0);
+   glEnd();
+
+
+ glBegin(GL_LINES);
+
+      glVertex3f(85.0,27.0, 0.0);
+      glVertex3f(85.0, 1.0, 0.0);
+   glEnd();
+
+}
+
+
+void nivel2(void){
+ glColor3f(1.0, 1.0, 1.0);
+  glLineWidth(4.0f);
       
    glBegin(GL_LINES);
 
@@ -240,8 +453,27 @@ void nivel1(void){
 
 }
 
+void meta(){
+      float t = 0; // Angle parameter.
+   int i;
 
-void nivel2(void){
+   glBegin(GL_LINE_LOOP);
+      glColor3f(0.0, 1.0, 0.0);
+         for(i = 0; i < numVertices; ++i)
+     {
+          
+         glVertex3f(X1 + R * cos(t), Y1 + R * sin(t), 0.0);
+         t += 2 * PI / numVertices;
+    }
+   glEnd();
+
+
+}
+
+
+
+
+void linel2(void){
 
   glColor3f(1.0, 1.0, 1.0);
   glLineWidth(4.0f);
@@ -274,161 +506,203 @@ void nivel2(void){
   
 //col1
    glBegin(GL_LINES);
-      glVertex3f(73.0,87.0, 0.0);
-      glVertex3f(99.0, 87.0, 0.0);
+
+      glVertex3f(49.0,87.0, 0.0);
+      glVertex3f(13.0, 87.0, 0.0);
    glEnd();
-
-
-   glBegin(GL_LINES);
-      glVertex3f(13.0,87.0, 0.0);
-      glVertex3f(25.0, 87.0, 0.0);
-   glEnd();
-
    //col2
-   glBegin(GL_LINES);
-      glVertex3f(85.0,75.0, 0.0);
-      glVertex3f(13.0, 75.0, 0.0);
+    glBegin(GL_LINES);
+
+      glVertex3f(49.0,75.0, 0.0);
+      glVertex3f(25.0, 75.0, 0.0);
    glEnd();
 
    //col3
 
-   glBegin(GL_LINES);
+     glBegin(GL_LINES);
+
+      glVertex3f(73.0,63.0, 0.0);
+      glVertex3f(85.0, 63.0, 0.0);
+   glEnd();
+      glBegin(GL_LINES);
+
       glVertex3f(25.0,63.0, 0.0);
       glVertex3f(61.0, 63.0, 0.0);
    glEnd();
 
-   glBegin(GL_LINES);
-      glVertex3f(85.0,63.0, 0.0);
-      glVertex3f(73.0, 63.0, 0.0);
-   glEnd();
-
+  
+   
    //col4
-   glBegin(GL_LINES);
-      glVertex3f(25.0,51.0, 0.0);
-      glVertex3f(85.0, 51.0, 0.0);
+      glBegin(GL_LINES);
+
+      glVertex3f(13.0,51.0, 0.0);
+      glVertex3f(49.0, 51.0, 0.0);
    glEnd();
 
+      glBegin(GL_LINES);
+      glVertex3f(73.0,51.0, 0.0);
+      glVertex3f(99.0, 51.0, 0.0);
+   glEnd();
 
 //col5
-   glBegin(GL_LINES);
-      glVertex3f(13.0,39.0, 0.0);
-      glVertex3f(49.0, 39.0, 0.0);
+    glBegin(GL_LINES);
+
+      glVertex3f(1.0,39.0, 0.0);
+      glVertex3f(13.0, 39.0, 0.0);
    glEnd();
 
-   glBegin(GL_LINES);
-      glVertex3f(85.0,39.0, 0.0);
-      glVertex3f(99.0, 39.0, 0.0);
+     glBegin(GL_LINES);
+
+      glVertex3f(49.0,39.0, 0.0);
+      glVertex3f(85.0, 39.0, 0.0);
    glEnd();
 
 //col6
-   glBegin(GL_LINES);
-      glVertex3f(85.0,27.0, 0.0);
+    glBegin(GL_LINES);
+
+      glVertex3f(1.0,27.0, 0.0);
       glVertex3f(25.0, 27.0, 0.0);
    glEnd();
 
 
+    glBegin(GL_LINES);
+
+      glVertex3f(37.0,27.0, 0.0);
+      glVertex3f(49.0, 27.0, 0.0);
+   glEnd();
+     glBegin(GL_LINES);
+
+      glVertex3f(61.0,27.0, 0.0);
+      glVertex3f(73.0, 27.0, 0.0);
+   glEnd();
 //col 7
 
   glBegin(GL_LINES);
 
       glVertex3f(13.0,15.0, 0.0);
-      glVertex3f(61.0, 15.0, 0.0);
+      glVertex3f(25.0, 15.0, 0.0);
    glEnd();
 
+
+     glBegin(GL_LINES);
+
+      glVertex3f(37.0,15.0, 0.0);
+      glVertex3f(49.0, 15.0, 0.0);
+   glEnd();
+
+
+     glBegin(GL_LINES);
+
+      glVertex3f(61.0,15.0, 0.0);
+      glVertex3f(85.0, 15.0, 0.0);
+   glEnd();
 
 
 //vertical
     glBegin(GL_LINES);
 
-      glVertex3f(13.0,75.0, 0.0);
+      glVertex3f(13.0,87.0, 0.0);
       glVertex3f(13.0, 51.0, 0.0);
    glEnd();
 
 
      glBegin(GL_LINES);
 
-      glVertex3f(13.0,39.0, 0.0);
-      glVertex3f(13.0, 15.0, 0.0);
+      glVertex3f(13.0,63.0, 0.0);
+      glVertex3f(13.0, 39.0, 0.0);
    glEnd();
-
 
 //col 2
-   glBegin(GL_LINES);
-      glVertex3f(25.0,99.0, 0.0);
-      glVertex3f(25.0, 87.0, 0.0);
+    glBegin(GL_LINES);
+
+      glVertex3f(25.0,75.0, 0.0);
+      glVertex3f(25.0, 63.0, 0.0);
    glEnd();
 
-   glBegin(GL_LINES);
-      glVertex3f(25.0,63.0, 0.0);
-      glVertex3f(25.0, 51.0, 0.0);
+
+    glBegin(GL_LINES);
+
+      glVertex3f(25.0,39.0, 0.0);
+      glVertex3f(25.0, 15.0, 0.0);
    glEnd();
+
+
+   
 
    //col3
-   glBegin(GL_LINES);
-      glVertex3f(37.0,87.0, 0.0);
-      glVertex3f(37.0, 75.0, 0.0);
+   
+
+     glBegin(GL_LINES);
+
+      glVertex3f(37.0,51.0, 0.0);
+      glVertex3f(37.0, 39.0, 0.0);
    glEnd();
 
-  glBegin(GL_LINES);
+    glBegin(GL_LINES);
+
       glVertex3f(37.0,27.0, 0.0);
       glVertex3f(37.0, 15.0, 0.0);
    glEnd();
-    //col4
-   glBegin(GL_LINES);
-      glVertex3f(49.0,99.0, 0.0);
-      glVertex3f(49.0, 87.0, 0.0);
-   glEnd();
+
+
    
-   glBegin(GL_LINES);
-      glVertex3f(49.0,51.0, 0.0);
-      glVertex3f(49.0, 39.0, 0.0);
+
+    //col4
+    
+
+      glBegin(GL_LINES);
+
+      glVertex3f(49.0,39.0, 0.0);
+      glVertex3f(49.0, 27.0, 0.0);
    glEnd();
   
 //col 5
 
+ 
    glBegin(GL_LINES);
+
       glVertex3f(61.0,87.0, 0.0);
-      glVertex3f(61.0, 75.0, 0.0);
+      glVertex3f(61.0, 39.0, 0.0);
    glEnd();
 
 
-   glBegin(GL_LINES);
-      glVertex3f(61.0,39.0, 0.0);
-      glVertex3f(61.0, 27.0, 0.0);
-   glEnd();
+
+
 
 //col 6
    
-   glBegin(GL_LINES);
-      glVertex3f(73.0,51.0, 0.0);
-      glVertex3f(73.0, 39.0, 0.0);
+      glBegin(GL_LINES);
+
+      glVertex3f(73.0,99.0, 0.0);
+      glVertex3f(73.0, 63.0, 0.0);
    glEnd();
 
+      glBegin(GL_LINES);
 
-   glBegin(GL_LINES);
-      glVertex3f(73.0,27.0, 0.0);
-      glVertex3f(73.0, 15.0, 0.0);
+      glVertex3f(73.0,15.0, 0.0);
+      glVertex3f(73.0, 1.0, 0.0);
    glEnd();
+   
+      glBegin(GL_LINES);
 
-
-
+      glVertex3f(73.0,39.0, 0.0);
+      glVertex3f(73.0, 27.0, 0.0);
+   glEnd();
 //col7
       
-   glBegin(GL_LINES);
-      glVertex3f(85.0,75.0, 0.0);
-      glVertex3f(85.0, 51.0, 0.0);
+
+
+      glBegin(GL_LINES);
+
+      glVertex3f(85.0,87.0, 0.0);
+      glVertex3f(85.0, 63.0, 0.0);
    glEnd();
 
 
-   glBegin(GL_LINES);
-      glVertex3f(85.0,39.0, 0.0);
-      glVertex3f(85.0, 27.0, 0.0);
-   glEnd();
+ glBegin(GL_LINES);
 
-
-   glBegin(GL_LINES);
-      glVertex3f(85.0,1.0, 0.0);
       glVertex3f(85.0,15.0, 0.0);
+      glVertex3f(85.0, 39.0, 0.0);
    glEnd();
 }
 
@@ -1029,7 +1303,7 @@ void specialKeyInputL1(int key, int x, int y)
 // Callback routine for non-ASCII key entry.
 void specialKeyInputL2(int key, int x, int y)
 {
-   if(key == GLUT_KEY_DOWN)   //ABAJO
+     if(key == GLUT_KEY_DOWN)   //ABAJO
    {
       if (derecha==0 && abajo==4){return;}
       if (derecha==1 && abajo==0){return;}
@@ -1196,6 +1470,7 @@ void specialKeyInputL2(int key, int x, int y)
 
    }
    glutPostRedisplay();
+
 }
 
 
@@ -1559,12 +1834,48 @@ void specialKeyInputL4(int key, int x, int y)
 }
 
 
-int ran(){
-
-    int num;
+int aleatorio(){
     srand(time(NULL));
   
-        num = 1 + rand() % (5 - 1);
+        ran = 1 + rand() % (5 - 1);
+
+        
+   if(ran==1){
+            
+            X = 7.0; 
+            Y = 93.0;
+            X1= 91.0; 
+            Y1= 9.0; 
+         
+
+      }
+
+      
+      if(ran==2){
+            X = 7.0; 
+            Y = 93.0;
+            X1= 67.0; 
+            Y1= 33.0; 
+        
+      }
+
+      
+      if(ran==3){
+            X = 55.0; 
+            Y = 45.0;
+            X1= 31.0; 
+            Y1= 21.0; 
+         
+      }
+
+      
+      if(ran==4){
+            X = 55.0; 
+            Y = 69.0;
+            X1= 31.0; 
+            Y1= 21.0; 
+         
+      }
 }  
   
 
@@ -1604,61 +1915,65 @@ void meta(float X1, float Y1){
 }
 
 
-
-
-  void seleccion(){
-  
-     ran();
-if(ran()==1){
-         
-         X = 7.0; 
-         Y = 93.0;
-         X1= 91.0; 
-         Y1= 9.0; 
- glutSpecialFunc(specialKeyInputL1);
-         cout <<X<<Y<<X1<<Y1<< " ";
-         nivel1();
-
-   }
-
+// Routine to draw a bitmap character string.
+void writeBitmapString(void *font, char *string){  
    
-   if(ran()==2){
-         X = 7.0; 
-         Y = 93.0;
-         X1= 67.0; 
-         Y1= 33.0; 
- glutSpecialFunc(specialKeyInputL2);
-         cout <<X<<Y<<X1<<Y1<< " ";
-         nivel2();
-   }
-
-   
-   if(ran()==3){
-         X = 55.0; 
-         Y = 45.0;
-         X1= 31.0; 
-         Y1= 21.0; 
- glutSpecialFunc(specialKeyInputL3);
-         cout <<X<<Y<<X1<<Y1<< " ";
-         nivel3();
-   }
-
-   
-   if(ran()==4){
-         X = 55.0; 
-         Y = 69.0;
-         X1= 31.0; 
-         Y1= 21.0; 
- glutSpecialFunc(specialKeyInputL4);
-         cout <<X<<Y<<X1<<Y1<< " ";
-         nivel4();
-   }
-
+   char *c;
+   for (c = string; *c != '\0'; c++) glutBitmapCharacter(font, *c);
 }
 
 
+void portada(){
+   glColor3f(1.0,1.0,1.0);
+
+   
+   glRasterPos3f(25.0, 85.0, 0.0);
+   writeBitmapString(GLUT_BITMAP_TIMES_ROMAN_24, "MAZES & MORE (Classic)");
+
+   glRasterPos3f(25.0, 65.0, 0.0);
+   writeBitmapString(GLUT_BITMAP_HELVETICA_18, "Preciona espacio para continuar");
+
+   glRasterPos3f(45.0, 35.0, 0.0);
+   writeBitmapString(GLUT_BITMAP_HELVETICA_18, "Integrantes:");
+   
+   glRasterPos3f(35.0, 30.0, 0.0);
+   writeBitmapString(GLUT_BITMAP_HELVETICA_12, "Brian Alejandro Mireles Ortiz");
+      
+   glRasterPos3f(35.0, 25.0, 0.0);
+   writeBitmapString(GLUT_BITMAP_HELVETICA_12, "Jose Rafael Perez Rodriguez");
+
+   
+   glRasterPos3f(35.0, 20.0, 0.0);
+   writeBitmapString(GLUT_BITMAP_HELVETICA_12, "Jari Alberto Martinez Gonzalez");
+
+   
+   glRasterPos3f(35.0, 15.0, 0.0);
+   writeBitmapString(GLUT_BITMAP_HELVETICA_12, "Yashub Armando Guzaman Espinoza");
 
 
+
+
+}
+
+void keyInput(unsigned char key, int x, int y)
+{
+   switch(key) 
+   {
+      case 27:
+         exit(0);
+         break;
+      case ' ':
+         bandera=false;
+         aleatorio();
+         
+  
+         break;
+
+      default:
+         break;
+   }
+      glutPostRedisplay();
+}
 
 
 
@@ -1666,11 +1981,61 @@ if(ran()==1){
 void displayMe(void)
 {  
 
-   glClear(GL_COLOR_BUFFER_BIT);
-seleccion();
 
-  serpiente(X,Y);
+   glClear (GL_COLOR_BUFFER_BIT);
+   glLoadIdentity();
+
+
+
+   if (bandera==true){
+   portada();
+   }  else
+   {
+      
+   if(ran==1){
+      
+           glutSpecialFunc(specialKeyInputL1);
+        
+            nivel1();
+
+      }
+
+      
+      if(ran==2){
+         
+            glutSpecialFunc(specialKeyInputL2);
+         
+            nivel2();
+      }
+
+      
+      if(ran==3){
+        
+            glutSpecialFunc(specialKeyInputL3);
+       
+            nivel3();
+      }
+
+      
+      if(ran==4){
+         
+            glutSpecialFunc(specialKeyInputL4);
+       
+            nivel4();
+      }
+
+   serpiente(X,Y);
    meta(X1,Y1);
+
+   if(X==X1&&Y==Y1){
+      aleatorio();
+         
+      
+   }
+   }
+   
+
+   
    glFlush();
 
 
@@ -1679,7 +2044,11 @@ seleccion();
 // Initialization routine.
 void init(void) 
 {
+
+    
    glClearColor(0.0, 0.0, 0.0, 0.0); 
+   
+
 }
 
 // OpenGL window reshape routine.
@@ -1694,25 +2063,16 @@ void resize(int w, int h)
 }
 
 // Keyboard input processing routine.
-void keyInput(unsigned char key, int x, int y)
-{
-   switch(key) 
-   {
-      case 27:
-         exit(0);
-         break;
 
-      default:
-         break;
-   }
-}
 
 // Routine to output interaction instructions to the C++ window.
 void printInteraction(void)
 {
    cout << "Interaction:" << endl;
    cout << "Press +/- to increase/decrease the number of vertices on the circle." << endl;  
-   cout << "Press [ESCAPE] to finish." << endl; 
+   cout << "Press [ESCAPE] to finish." << endl;
+
+   
   
 }
 
@@ -1728,6 +2088,7 @@ int main(int argc, char **argv)
    	init(); 
    	glutDisplayFunc(displayMe); 
    	glutReshapeFunc(resize);  
+      glutKeyboardFunc(keyInput);
    	
    	glutMainLoop(); 
 
